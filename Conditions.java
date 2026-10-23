@@ -61,6 +61,22 @@ public class Conditions
          * 
          *  (Unlike Python, Java uses "else if" instead of "elif").
          */
+        if (dieRoll == 1)
+        {
+            System.out.println("rolled a 1");
+        }
+        else if (dieRoll == 2)  // can have as many else if block as you need
+        {
+            System.out.println("rolled a 2");
+        }
+        else if (dieRoll == 3)  // can have as many else if block as you need
+        {
+            System.out.println("rolled a 3");
+        }
+        else  // not required, but the best choice here
+        {
+            System.out.println("rolled a 4");
+        }
         
         
     }
