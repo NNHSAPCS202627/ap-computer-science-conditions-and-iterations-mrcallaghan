@@ -39,6 +39,53 @@ public class Conditions
         if (coinFlip == 0)
             System.out.println("coin is tails!");     
             System.out.println("better luck next time...");  // not in the if block!
+            
+        /*
+         * if, else statement
+         * 
+         *  The else block is executed if the conditional expression evaluates to false
+         */
+        if (coinFlip == 1)
+        {
+            System.out.println("coin is heads!");
+        }
+        else  // optional
+        {
+            System.out.println("coin is tails!");
+        }
+        
+        /*
+         * if, else if, else statement
+         * 
+         *  (Unlike Python, Java uses "else if" instead of "elif").
+         */
+        // model a die roll of four sides (1-4)
+        int dieRoll = (int) (Math.random() * 4) + 1;
+        System.out.println("roll is: " + dieRoll);
+        
+        if (dieRoll == 1)
+        {
+            System.out.println("rolled a one");
+        }
+        else if (dieRoll == 2)
+        {
+            System.out.println("rolled a two");
+        }
+        else if (dieRoll == 3)
+        {
+            System.out.println("rolled a three");
+        }
+        else
+        {
+            System.out.println("rolled a four");
+        }
+        
+        
+        
+        
+        
+        
+        
 
     }
 }
