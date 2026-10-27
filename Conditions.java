@@ -77,4 +77,95 @@ public class Conditions
             System.out.println("you rolled a four!");
         }
     }
+    
+    public static void stringExample()
+    {
+        Scanner s = new Scanner(System.in);
+        System.out.print("enter two fruits: ");
+        String str1 = s.next();  // next gets the next token from the input stream
+        String str2 = s.next();
+        
+        /*
+         * The equality operator (==) returns true if the two variables contain the same value.
+         *      For variables of a class type, including Strings, this means that they contain
+         *      the same reference.  That is, they refer to the same object in memory, not
+         *      that the characters are in the same sequence.
+         *      
+         *  Alias: when two variables refer to the same object
+         *      
+         */
+        if (str1 == str2)
+        {
+            System.out.println("string references are equal");
+        }
+        else
+        {
+            System.out.println("string references are NOT equal");
+        }
+        
+        /*
+         * The equals method returns true if the two objects referenced by the variables
+         *  are "equal".  Equality is determeined by the class.  For Strings, it means
+         *  that the two objects have the same sequence of characters.
+         */
+        if (str1.equals(str2))
+        {
+            System.out.println("strings are equal");
+        }
+        else
+        {
+            System.out.println("strings are NOT equal");
+        }
+        
+        /*
+         * If we want to check if the strings are not equal, we use the logical complement
+         *  operator (i.e., !)
+         */
+        if (! str1.equals(str2))
+        {
+            System.out.println("strings are NOT equal");
+        }
+        
+        /*
+         * We will determine which String comes first lexicographically using the compareTo
+         *      method of the String class.
+         *      
+         *      compareTo returns an int:
+         *          0:      if the strings are equal (same sequence of chars)
+         *          <0:     if str1 < str2 lexicographically
+         *          >0:     if str1 > str2 lexicographically
+         */
+        int result = str1.compareTo(str2);
+        System.out.println("Result of comparison: " + result);
+        
+        String firstStr = null;
+        if (result < 0)
+        {
+            firstStr = str1;
+        }
+        else if (result > 0)
+        {
+            firstStr = str2;
+        }
+        
+        if (firstStr == null)
+        {
+            System.out.println("strings are equal");
+        }
+        else
+        {
+            System.out.println("the first string is: " + firstStr);
+        }
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
