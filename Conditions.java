@@ -163,6 +163,34 @@ public class Conditions
         
     }
     
+    public static boolean doublesAreEqual(double num1, double num2)
+    {
+        /*
+         * If we use the equality operator (==) for doubles, it will only return true
+         *      if all binary bits match.
+         *  For "equal" numbers, this is probably not the case due to floating-point rounding
+         *      and, therefore, not what we want.
+         *   We will check if they are "close enough" (i.e., epsilon value).
+         */
+        final double EPSILON = 1e-6;
+        
+        /*
+         * We use Math.abs() to get the absolute value of the difference between the two numbers.
+         * If the absolute value is less than the epsilon, we consider them equal.
+         */
+        if(Math.abs(num1 - num2) < EPSILON)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+        
+        // don't have to use an if statement
+        //return (Math.abs(num1 - num2) < EPSILON);
+    }
+    
     
     
     
