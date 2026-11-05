@@ -54,4 +54,55 @@ public class Iterations
         
         System.out.println("done.");
     }
+    
+    public static void forExample()
+    {
+        /*
+         * for loop:
+         *      
+         *      three main parts of the for statement:
+         *          1. initialization - executed once
+         *          2. condition - boolean expression evaluated at the start of every loop iteration
+         *          3. updating the loop variable - executed at the end of each iteration and
+         *                  before reevaluating the loop condition.
+         */
+        //int count;
+        for(int count = 1;              // initialization
+                count <=5;              // condition
+                count++)                // update the loop variable
+        {
+            System.out.println(count);  // loop body            
+        }
+        
+        System.out.println("done.");
+        
+        // variables declared within the for statment are scoped to the body of the loop
+        //System.out.println("final value of count is: " + count);
+    }
+    
+    public static void offByOne()
+    {
+        /*
+         * The infamous off-by-one error.  It is common with for loops executing one too many times,
+         *      or one too few.
+         *      
+         *      Carfully ask: Should the initial value start at 1 or 0?
+         *                    Should the condition end at < or <= ?
+         *                    
+         *      By convetion for simple for loops, we start at 0 and use <.
+         */
+        
+        // intent of program is to print 5 asterisks
+        for(int i = 0; i <= 5; i++)  // would require the < to debug this! (or start at 1 instead of 0)
+        {
+            System.out.println("*");
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
 }
