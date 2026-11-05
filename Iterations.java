@@ -96,6 +96,17 @@ public class Iterations
         System.out.println("done.");
     }
     
+    public static void tracingForExample()
+    {
+        double n = 3;
+        for(int i = 3; i < 9; i+=2) 
+        {
+            n *= i;
+        }
+        
+        System.out.println(n);
+    }
+    
     
     
     
