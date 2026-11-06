@@ -106,6 +106,54 @@ public class Iterations
         
     }
     
+    public static void doExample()
+    {
+        /*
+         * do loop (do-while loops)
+         * 
+         *      1. execute the body of the loop
+         *      2. evaluation of the loop condition:
+         *              if true: executes the body of the loop again
+         *              if false: continues execution after the loop
+         */
+        
+        int count = 1;      // initialization
+        
+        do
+        {
+            System.out.println(count);      // loop body
+                
+            count++;                        // increment loop variable
+        }
+        while(count <= 5);                  // condtion
+        
+        System.out.println("done.");
+    }
+    
+    public static int sum()
+    {
+        Scanner s = new Scanner(System.in);
+        
+        int sum = 0;
+        int value;
+        do
+        {
+            System.out.print("Enter a postive integer (-1 to quit): ");
+            /*
+             * Sentinel value / variable
+             *      value (e.g., -1) used to terminate a loop.  Often user defined.
+             */
+            value = s.nextInt();
+            if(value != -1)
+            {
+                sum += value;
+            }
+            
+        }
+        while(value != -1);
+        
+        return sum;
+    }
     
     
     
