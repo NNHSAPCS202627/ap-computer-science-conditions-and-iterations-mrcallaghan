@@ -160,6 +160,77 @@ public class Iterations
         return sum;
     }
     
+    public static int sumWithContinue()
+    {
+        Scanner s = new Scanner(System.in);
+        int sum = 0;
+        int value = 0;
+        
+        do
+        {
+            System.out.print("enter a postive integer (-1 to quit): ");
+            /*
+             * The hasNextInt method of the Scanner returns true if the next token is read as an integer.
+             *      Otherwise, it returns false.  It does not consume the next token.  If there are no tokens
+             *      , it will wait until there are more.
+             */
+            if(s.hasNextInt() == false)
+            {
+                String token = s.next();
+                System.out.println("\"" + token + "\" is not an integer; try again.");
+                /*
+                 * continue:
+                 *      1. immediately skips to the end of the inner-most loop
+                 *      2. re-evaluate the loop condition and continue with the next iteration
+                 *          if the condition is true.
+                 */
+                continue;
+            }
+            
+            value = s.nextInt();
+
+            if(value == -1)
+            {
+                /*
+                 * break: immediately exit the innermost loop
+                 */
+                break;
+            }
+            
+            sum += value;
+            
+        }
+        while(value != -1);
+        
+        return sum;
+    }
+    
+    public static int sumWithBreak()
+    {
+        Scanner s = new Scanner(System.in);
+        int sum = 0;
+        int value;
+        
+        do
+        {
+            System.out.print("enter a postive integer (-1 to quit): ");
+            value = s.nextInt();
+
+            if(value == -1)
+            {
+                /*
+                 * break: immediately exit the innermost loop
+                 */
+                break;
+            }
+            
+            sum += value;
+            
+        }
+        while(value != -1);
+        
+        return sum;
+    }
     
     
 }
