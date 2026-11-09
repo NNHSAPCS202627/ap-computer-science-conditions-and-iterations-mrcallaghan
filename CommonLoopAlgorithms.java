@@ -10,7 +10,30 @@ public class CommonLoopAlgorithms
      */
     public static int countMatchesForLength()
     {
-        return 0;
+        Scanner s = new Scanner(System.in);
+        int counter = 0;
+        String newToken = "";
+
+        System.out.print("Enter words and press the Enter key as you go (Type 'quit' to stop):\n");
+
+        while (true)
+        {
+            newToken = s.next().toLowerCase();
+            int length = newToken.length();
+
+            if (newToken.equals("quit")) {
+                //end loop
+                break;
+            }
+
+            if (length > 4) {
+                //increment counter if the word's length is 5 or more characters
+                counter++;
+            }
+
+        }
+
+        return counter;
     }
 
     /*
@@ -21,7 +44,19 @@ public class CommonLoopAlgorithms
      */
     public static int countMatchesForPrefix()
     {
-        return 0;
+        Scanner s = new Scanner(System.in);
+        String string;
+        int value = 0;
+        do{
+            System.out.println("Enter you string here");
+            string = s.nextLine();
+            if (string.equals("quit"))
+                break;
+            if (string.substring(0,3).equals("con"))
+                value++;
+        }
+        while (true);
+        return value;
     }
 
     /*
@@ -32,7 +67,29 @@ public class CommonLoopAlgorithms
      */
     public static int countMatchesForSuffix()
     {
-        return 0;
+        Scanner s = new Scanner(System.in);
+       
+        int count = 0;
+       
+        do
+        {
+            System.out.println("Enter a word (quit to quit) :");
+           
+            String token = s.next();
+           
+            if(token.equals("quit"))
+            {
+                break;
+            }
+           
+            if(token.substring(token.length() - 3).equals("est"))
+            {
+                count++;
+            }
+        }
+        while(true);
+       
+        return count;
     }
 
     /*
