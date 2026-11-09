@@ -68,27 +68,27 @@ public class CommonLoopAlgorithms
     public static int countMatchesForSuffix()
     {
         Scanner s = new Scanner(System.in);
-       
+
         int count = 0;
-       
+
         do
         {
             System.out.println("Enter a word (quit to quit) :");
-           
+
             String token = s.next();
-           
+
             if(token.equals("quit"))
             {
                 break;
             }
-           
+
             if(token.substring(token.length() - 3).equals("est"))
             {
                 count++;
             }
         }
         while(true);
-       
+
         return count;
     }
 
@@ -122,7 +122,22 @@ public class CommonLoopAlgorithms
      */
     public static String promptUntilMatch()
     {
-        return "";
+        Scanner s = new Scanner(System.in);
+        String string1 = "north";
+        String string2 = "";
+
+        while (string2.compareTo(string1) < 0 || string2.length() <= 6)
+        {
+            System.out.print("Enter a word: ");
+            string2 = s.next();
+            if (string2.compareTo(string1) > 0 && string2.length() > 6)
+            {
+                continue;
+            }
+        }
+
+        System.out.println("Your word meets the criteria.");
+        return string2;
     }
 
     /*
