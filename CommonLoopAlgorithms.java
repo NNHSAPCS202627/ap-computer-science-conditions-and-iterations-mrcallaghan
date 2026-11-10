@@ -48,11 +48,15 @@ public class CommonLoopAlgorithms
         String string;
         int value = 0;
         do{
-            System.out.println("Enter you string here");
+            System.out.println("Enter you string here: (Enter \"Quit\" if you are finished");
             string = s.nextLine();
             if (string.equals("quit"))
                 break;
-            if (string.substring(0,3).equals("con"))
+            else if (string.length() < 3){
+                System.out.println("String must be 3 characters or greater");
+                continue;
+            }
+            else if (string.substring(0,3).equals("con"))
                 value++;
         }
         while (true);
@@ -100,7 +104,18 @@ public class CommonLoopAlgorithms
      */
     public static String reverseWord()
     {
-        return "";
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter the string: ");
+        String input = s.nextLine();
+        int length = input.length();
+        String output = "";
+        for (int i = 0; i < length; i++)
+        {
+            String c = input.substring( length - i - 1, length - i);
+            //output = output + c
+            output += c;
+        }
+        return output;
     }
 
     /*
@@ -110,7 +125,7 @@ public class CommonLoopAlgorithms
      */
     public static int compareAdjacent()
     {
-        Scanner S = new Scanner (System.in);
+        Scanner s = new Scanner (System.in);
 
         String newWord = " ";
         String oldWord = "a";
@@ -120,13 +135,13 @@ public class CommonLoopAlgorithms
         {
             System.out.println(" enter word");
             oldWord = newWord;
-            newWord = S.nextLine();
+            newWord = s.nextLine();
             count++;        
         }
 
         System.out.println(count);
 
-        return count;
+        return count - 1;
     }
 
     /*
