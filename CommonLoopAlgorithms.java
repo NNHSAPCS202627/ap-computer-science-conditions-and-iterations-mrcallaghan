@@ -19,9 +19,7 @@ public class CommonLoopAlgorithms
         while (!word.equals("quit")) {
             if (word.length() > 4) {
                 fourPlus++;
-            } else {
-                System.out.println("4 or less");
-            }
+            } 
 
             System.out.print("enter a word ('quit' to stop): ");
             word = s.next();
@@ -133,11 +131,12 @@ public class CommonLoopAlgorithms
      */
     public static int compareAdjacent()
     {
+        Scanner s = new Scanner(System.in);
         String current = "";
         String last = "";
         int count = 0;
         do {
-            Scanner s = new Scanner(System.in);
+
             last = current;
             System.out.println("Enter word: ");
             current = s.next();
@@ -166,7 +165,7 @@ public class CommonLoopAlgorithms
             System.out.print("\nStr?: ");
             string = scanner.nextLine();
 
-            if (!(string.compareTo("north") > 0 && string.length() < 6)) {
+            if ((string.compareTo("north") > 0 && string.length() > 6)) {
                 break;
             }
 
