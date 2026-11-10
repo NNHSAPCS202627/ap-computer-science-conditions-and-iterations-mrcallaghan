@@ -89,7 +89,22 @@ public class CommonLoopAlgorithms
      */
     public static String reverseWord()
     {
-        return "";
+        Scanner s = new Scanner(System.in);
+        String newString = "";
+
+        System.out.print("enter a string");
+
+        String str = s.next();
+        int length = str.length();
+
+        for (int i = length - 1;
+        i >= 0;
+        i--)
+        {  
+            newString += str.charAt(i); // we can do this bc the newString gets reinitialized everytime in the loop
+        }
+
+        return newString;
     }
 
     /*
@@ -125,7 +140,21 @@ public class CommonLoopAlgorithms
      */
     public static String promptUntilMatch()
     {
-        return "";
+        Scanner scanner = new Scanner(System.in);
+        String string;
+
+        while (true) {
+            System.out.print("\nStr?: ");
+            string = scanner.nextLine();
+
+            if (!(string.compareTo("north") > 0 && string.length() < 6)) {
+                break;
+            }
+
+            System.out.println("\nNot valid didn't you understand my very clear instructions?");
+        }
+
+        return string;
     }
 
     /*
