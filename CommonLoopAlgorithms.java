@@ -38,7 +38,26 @@ public class CommonLoopAlgorithms
      */
     public static int countMatchesForPrefix()
     {
-        return 0;
+        int matches = 0;
+        String str;
+        Scanner s = new Scanner(System.in);
+
+        while(true)
+        {
+            System.out.print("Enter the word(enter 'quit' to end): ");
+            str = s.next();
+
+            if(str .equals("quit"))
+            {
+                break;
+            }
+            else if(str.substring(0, 3).equals("con"))
+            {
+                matches += 1;
+            }
+        }
+
+        return matches;
     }
 
     /*
