@@ -10,7 +10,20 @@ public class CommonLoopAlgorithms
      */
     public static int countMatchesForLength()
     {
-        return 0;
+        Scanner s = new Scanner(System.in);
+        int count = 0;
+        String word;
+        System.out.println("Enter a word (enter quit to end)");
+        do
+        {
+            word = s.next();
+            if (!word.equals("quit") && word.length() > 4)
+            {
+                count ++;
+            }
+        }
+        while (!word.equals("quit"));
+        return count;
     }
 
     /*
