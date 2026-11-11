@@ -20,4 +20,20 @@ public class Warmups
         
         // alt. return x % y == 0;
     }
+    
+    public static void warmup2()
+    {
+        for(int i = 0; i <= 10; i+=2)
+        {
+            System.out.println(i);
+        }
+    
+    
+    }
+    
+    
+    
+    
+    
+    
 }
