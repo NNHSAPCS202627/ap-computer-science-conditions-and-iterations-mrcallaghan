@@ -20,4 +20,13 @@ public class Warmups
         
         // alt. return (x % y == 0)
     }
+    
+    public static void warmup2()
+    {
+        
+    }
+    
+    
+    
+    
 }
