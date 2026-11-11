@@ -21,4 +21,9 @@ public class Warmups
         // alternative:
         // return (x % y == 0);
     }
+    
+    public static void forWarmup()
+    {
+        
+    }
 }
