@@ -19,22 +19,22 @@ public class Iterations
          *          if true, executes the body of the loop and then re-evaluates the expression
          *          if false, skips the loop body and continues
          */
-        
+
         int count = 1;          // initialization before loop
-        
+
         while (count <= 5)      // condition
         {
             System.out.println(count);      // loop body to be repeated
-            
+
             // ++ is the post-increment operator:
             //      equivalent to count += 1 and count = count + 1
             count++;                        // increment loop variable
         }
-        
+
         System.out.println("done.");
-        
+
     }
-    
+
     public static void whileExample2()
     {
         int count = 1;
@@ -48,14 +48,13 @@ public class Iterations
         while(count <= 50)
         {
             System.out.println(count);
-            
+
             count += 2;
         }
-        
+
         System.out.println("done.");
     }
-    
-    
+
     public static void forExample()
     {
         /*
@@ -69,19 +68,19 @@ public class Iterations
          */
         int count;
         for(count = 1;          // initialization
-                count <= 5;         // condition
-                count++)            // update the loop variable
+        count <= 5;         // condition
+        count++)            // update the loop variable
         {
             System.out.println(count);     // loop body
         }
-        
+
         /*
          * variables initialized inside of a for statement or loop body are scoped to the loop and 
          *      don't exist outside of it.
          */
         System.out.println("done. The current value of count outside the loop is: " + count);
     }
-    
+
     public static void offByOne()
     {
         /*
@@ -95,16 +94,14 @@ public class Iterations
          *          
          *    For simple for loops, we usually start at 0 and use <.
          */
-        
+
         // intends to print 10 asterisks!
         for(int i = 0; i <= 10; i++)
         {
             System.out.println("*");
         }
-        
-        
+
     }
-    
     public static void doExample()
     {
         /*
@@ -115,24 +112,24 @@ public class Iterations
          *              if true: executes the body of the loop again
          *              if false: continues execution after the loop
          */
-        
+
         int count = 1;      // initialization
-        
+
         do
         {
             System.out.println(count);      // loop body
-                
+
             count++;                        // increment loop variable
         }
         while(count <= 5);                  // condtion
-        
+
         System.out.println("done.");
     }
-    
+
     public static int sum()
     {
         Scanner s = new Scanner(System.in);
-        
+
         int sum = 0;
         int value;
         do
@@ -147,17 +144,17 @@ public class Iterations
             {
                 sum += value;
             }
-            
+
         }
         while(value != -1);
-        
+
         return sum;
     }
-    
+
     public static int sumWithBreak()
     {
         Scanner s = new Scanner(System.in);
-        
+
         int sum = 0;
         int value;
         do
@@ -172,25 +169,25 @@ public class Iterations
                  */
                 break;
             }
-            
+
             sum += value;
-            
+
         }
         while(value != -1);
-        
+
         return sum;
     }
-    
+
     public static int sumWithContinue()
     {
         Scanner s = new Scanner(System.in);
-        
+
         int sum = 0;
         int value = 0;
         do
         {
             System.out.print("Enter a postive integer (-1 to quit): ");
-            
+
             /*
              * The hasNextInt method of the Scanner class returns true if the next token to be read in
              *      is an integer; otherwise, it will return false.  It does not consume the next token.  If
@@ -199,33 +196,69 @@ public class Iterations
             if(s.hasNextInt() == false)
             {
                 String token = s.next();
-                
+
                 System.out.println("\"" + token + "\" is not an integer; try again.");
-                
+
                 /*
                  * continue:
                  *      1. immediately skip to the end of the innermost loop
                  *      2. re-evaluate the loop conditon and continue with the next iteration if true
                  */
                 continue;
-            
+
             }
-            
 
             value = s.nextInt();
             if(value != -1)
             {
                 sum += value;
             }
-            
+
         }
         while(value != -1);
-        
+
         return sum;
     }
-    
-    
-    
-    
+
+    /*
+     * Ch. 6: Nested Loops (pair)
+     * 
+     * 1 1
+     * 1 2
+     * 1 3
+     * 1 4
+     * 2 1
+     * 2 2
+     * 2 3
+     * 2 4
+     */
+    public static void nestedLoop1()
+    {
+        // control variable for the outer loop; starts at 1, ends at 2
+        for(int i = 1; i <= 2; i++)
+        {
+            // control variable for the inner loop; starts at 1, ends at 4
+            for(int j = 1; j <= 4; j++)
+            {
+                System.out.println(i + " " + j);
+            }
+        }
+    }
+
+    public static void nestedLoop2()
+    {
+        int i = 1;
+        while(i <= 2)
+        {
+            int j = 1;
+            while(j <= 4)
+            {
+                System.out.println(i + " " + j);
+                j++;
+            }
+            i++;
+        }
+    }
+
     
 }
