@@ -3,8 +3,8 @@ import java.awt.Color;
 /**
  * Class that manipulates the colors in a specified picture
  *
- * @author 
- * @version 
+ * @author mcallaghan   
+ * @version 18nov2026
  */
 public class ColorManipulator
 {
