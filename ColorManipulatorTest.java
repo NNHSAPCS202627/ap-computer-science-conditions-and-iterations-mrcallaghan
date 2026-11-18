@@ -33,33 +33,33 @@ public class ColorManipulatorTest
     {
     }
     
-    // /**
-     // * Test for the maxRed method
-     // */
-    // @Test
-    // public void maxBlueTest()
-    // {
-        // ColorManipulator colorManipulator = new ColorManipulator(new Picture("Schmit.jpg"));
+    /**
+     * Test for the maxRed method
+     */
+    @Test
+    public void maxBlueTest()
+    {
+        ColorManipulator colorManipulator = new ColorManipulator(new Picture("Schmit.jpg"));
         
-        // // Calls the maxRed method and tests that red value is 255
-        // colorManipulator.maxBlue();
-        // Picture picture = colorManipulator.getPicture();
+        // Calls the maxRed method and tests that red value is 255
+        colorManipulator.maxBlue();
+        Picture picture = colorManipulator.getPicture();
         
-        // Pixel pixel1 = picture.getPixel(10, 10);
-        // assertEquals(pixel1.getBlue(), 255);
+        Pixel pixel1 = picture.getPixel(10, 10);
+        assertEquals(pixel1.getBlue(), 255);
 
         
-        // Pixel pixel2 = picture.getPixel(10, 50);
-        // assertEquals(pixel2.getBlue(), 255);
+        Pixel pixel2 = picture.getPixel(10, 50);
+        assertEquals(pixel2.getBlue(), 255);
 
         
-        // Pixel pixel3 = picture.getPixel(50, 10);
-        // assertEquals(pixel3.getBlue(), 255);
+        Pixel pixel3 = picture.getPixel(50, 10);
+        assertEquals(pixel3.getBlue(), 255);
 
         
-        // Pixel pixel4 = picture.getPixel(50, 50);
-        // assertEquals(pixel4.getBlue(), 255);
-    // }
+        Pixel pixel4 = picture.getPixel(50, 50);
+        assertEquals(pixel4.getBlue(), 255);
+    }
     
     // /**
      // * Test for the maxRed method

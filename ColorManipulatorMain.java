@@ -9,7 +9,7 @@ public class ColorManipulatorMain
     public static void main(String[] args)
     {
         // create a new picture object based on the .jpg file saved to folder
-        Picture selfie = new Picture( "Callaghan.jpg" );
+        Picture selfie = new Picture( "Schmit.jpg" );
 
         // create a ColorManipulator object, used to transform the picture
         ColorManipulator manipulator = new ColorManipulator( selfie );
